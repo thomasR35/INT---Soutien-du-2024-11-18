@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Hello</title>
     <style>
-        p {
-            display: none;
-        }
-        button {
-            display: block;
-        }
-        .visible {
-            display: initial;
-        }
+      p {
+        display: none;
+      }
+      button {
+        display: block;
+      }
+      .visible {
+        display: initial;
+      }
     </style>
-</head>
-<body>
-    <a href="https://www.google.fr" class="js-link">Clic me</a>
+  </head>
+  <body>
+    <a href="https://www.google.fr" class="js-link">Click me</a>
     <p class="js-paragraph"></p>
     <script type="text/javascript">
-        /*
-            Au clic sur le lien, écrire le mot "Bienvenue" dans le paragraphe
-        */
+      document.querySelector(".js-link").addEventListener("click", (event) => {
+        event.preventDefault();
+        document.querySelector(".js-paragraph").classList.add("visible");
+        document.querySelector(".js-paragraph").innerText = "Bienvenue";
+      });
     </script>
-</body>
+  </body>
 </html>
