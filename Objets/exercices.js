@@ -71,3 +71,34 @@ let prixTotal1 = produitCommande1.prix * produitCommande1.quantite;
 let prixTotal2 = produitCommande2.prix * produitCommande2.quantite;
 let prixTotal3 = prixTotal1 + prixTotal2;
 console.log(prixTotal3);
+/* Exercice 7
+   - Pour chaque élément de la collection, afficher dans la console le modele et le stock.
+   INFO : Une collection est un tableau d'objets
+*/
+
+let stockVoitures = [
+  {
+    modele: "Opel Astra",
+    couleur: "noir",
+    stock: 2,
+  },
+  {
+    modele: "Jaguar",
+    couleur: "noir",
+    stock: 120,
+  },
+  {
+    modele: "Peugeot 205",
+    couleur: "bleu",
+    stock: 4500,
+  },
+  {
+    modele: "Ferrari",
+    couleur: "rouge",
+    stock: 56,
+  },
+];
+
+stockVoitures.forEach((voiture) => {
+  console.log(voiture.modele, voiture.stock);
+});
