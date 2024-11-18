@@ -29,15 +29,16 @@
         },
       ];
 
-      let total = 0;
-      stock.forEach((item) => {
-        total += item.price * item.quantity;
+      const listeHTML = document.createElement("ul");
+
+      stock.forEach((produit) => {
+        const prixStock = produit.price * produit.quantity;
+
+        const listeItem = document.createElement("li");
+        listeItem.innerText = `Prix stock: ${prixStock}`;
+        listeHTML.appendChild(listeItem);
       });
-      let ul = document.createElement("ul");
-      let li = document.createElement("li");
-      li.textContent = total;
-      ul.appendChild(li);
-      document.body.appendChild(ul);
+      document.body.appendChild(listeHTML);
     </script>
   </body>
 </html>
